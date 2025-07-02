@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafting Responsive & Interactive Web Experiences</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>WebNest Studio</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#quiz" class="nav-link">Quiz</a>
+                <a href="#carousel" class="nav-link">Gallery</a>
+                <a href="#api" class="nav-link">Weather</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Crafting Responsive & Interactive Web Experiences</h2>
+                <p>Learn. Click. Interact.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz Section -->
+        <section id="quiz" class="quiz-section">
+            <div class="container">
+                <h2>Quiz Me Up!🧩</h2>
+                <div class="quiz-container">
+                    <div id="quiz-start" class="quiz-start">
+                        <h3>Test Your Knowledge!</h3>
+                        <p>Answer 5 questions about web development</p>
+                        <button id="start-quiz-btn" class="btn btn-primary">Start Quiz</button>
+                    </div>
+                    
+                    <div id="quiz-game" class="quiz-game hidden">
+                        <div class="quiz-header">
+                            <div class="progress-bar">
+                                <div id="progress-fill" class="progress-fill"></div>
+                            </div>
+                            <span id="question-counter">Question 1 of 5</span>
+                        </div>
+                        
+                        <div class="quiz-content">
+                            <h3 id="question-text">Question will appear here</h3>
+                            <div id="answer-options" class="answer-options">
+                                <!-- Options will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <button id="next-question-btn" class="btn btn-secondary hidden">Next Question</button>
+                    </div>
+                    
+                    <div id="quiz-results" class="quiz-results hidden">
+                        <h3>Quiz Complete!</h3>
+                        <div id="score-display"></div>
+                        <button id="restart-quiz-btn" class="btn btn-primary">Take Quiz Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Carousel Section -->
+        <section id="carousel" class="carousel-section">
+            <div class="container">
+                <h2>Slide Nest🖼️ </h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-slide active">
+                                <img src="https://i.pinimg.com/736x/03/7f/0f/037f0ff610f1a9178688623ad85f10cd.jpg" alt="Slide 1 ">
+                                <div class="carousel-caption">
+                                    <h3>Responsive Layouts Using Media Queries</h3>
+                                    <p>Building Modern, Responsive & Interactive Web Experiences</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://i.pinimg.com/736x/57/ea/89/57ea898844b18668b14be3a189928999.jpg" alt="Slide 2">
+                                <div class="carousel-caption">
+                                    <h3>Code Architecture</h3>
+                                    <p>Clean Code. Strong Logic.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://i.pinimg.com/736x/5e/c9/e9/5ec9e95dd23cfb0e2d782ad7097484ca.jpg" alt="Slide 3">
+                                <div class="carousel-caption">
+                                    <h3>Live Data Integration</h3>
+                                    <p>Fetching & Displaying Live Data via Public APIs</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://i.pinimg.com/736x/75/9e/ba/759eba582da8d1ee8f51f2dbda39213f.jpg" alt="Slide 4">
+                                <div class="carousel-caption">
+                                    <h3>Click, Fetch, Laugh!</h3>
+                                    <p>Adding Fun with Joke APIs</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://miro.medium.com/v2/resize:fit:816/1*EBE31zbEscAD4EEmAEUMAA.png" alt="Slide 5">
+                                <div class="carousel-caption">
+                                    <h3>Structure First, Scale Next</h3>
+                                    <p>Organized, Scalable Code Architecture</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-btn carousel-prev" id="prev-btn">❮</button>
+                        <button class="carousel-btn carousel-next" id="next-btn">❯</button>
+                        
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                            <span class="indicator" data-slide="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Data Section -->
+        <section id="api" class="api-section">
+            <div class="container">
+                <h2>Weather Cast⛅</h2>
+                <div class="api-container">
+                    <div class="weather-search">
+                        <input type="text" id="city-input" placeholder="Enter city name" class="city-input">
+                        <button id="get-weather-btn" class="btn btn-primary">Get Weather</button>
+                    </div>
+                    
+                    <div id="weather-display" class="weather-display">
+                        <div class="weather-card">
+                            <div id="weather-info" class="weather-info">
+                                <p>Enter a city name to get current weather information</p>
+                            </div>
+                            <div id="loading" class="loading hidden">
+                                <div class="spinner"></div>
+                                <p>Loading weather data...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="joke-section">
+                        <h3>The Debug Laugh😂</h3>
+                        <div id="joke-display" class="joke-display">
+                            <p id="joke-text">Click the button to get a programming joke!</p>
+                        </div>
+                        <button id="get-joke-btn" class="btn btn-secondary">Get New Joke</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 WebNest Studio. </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
