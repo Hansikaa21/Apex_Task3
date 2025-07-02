@@ -36,6 +36,7 @@ Fetches a random joke using a public joke API
 One-click instant humor for users
 
 Tech Stack:
+
 HTML5 – Structure
 
 CSS3 – Styling and Responsive Design
